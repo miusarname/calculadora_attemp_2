@@ -26,12 +26,45 @@ class MyApp extends StatelessWidget {
               ),
               Row(
                 children: [
-                  TextButton(onPressed: (){}, child: const Text('Text Button')),
-                  TextButton(onPressed: (){}, child: const Text('Text Button')),
-                  TextButton(onPressed: (){}, child: const Text('Text Button')),
-                  TextButton(onPressed: (){}, child: const Text('Text Button'))
+                  FilledButton(onPressed: (){}, child: const Text('C')),
+                  FilledButton(onPressed: (){}, child: const Text('()')),
+                  FilledButton(onPressed: (){}, child: const Text('%')),
+                  FilledButton(onPressed: (){}, child: const Text('/'))
+                ],
+              ),
+              Row(
+                children: [
+                  FilledButton(onPressed: (){}, child: const Text('7')),
+                  FilledButton(onPressed: (){}, child: const Text('8')),
+                  FilledButton(onPressed: (){}, child: const Text('9')),
+                  FilledButton(onPressed: (){}, child: const Text('x'))
+                ],
+              ),
+              Row(
+                children: [
+                  FilledButton(onPressed: (){}, child: const Text('C')),
+                  FilledButton(onPressed: (){}, child: const Text('()')),
+                  FilledButton(onPressed: (){}, child: const Text('%')),
+                  FilledButton(onPressed: (){}, child: const Text('/'))
+                ],
+              ),
+              Row(
+                children: [
+                  FilledButton(onPressed: (){}, child: const Text('C')),
+                  FilledButton(onPressed: (){}, child: const Text('()')),
+                  FilledButton(onPressed: (){}, child: const Text('%')),
+                  FilledButton(onPressed: (){}, child: const Text('/'))
+                ],
+              ),
+              Row(
+                children: [
+                  FilledButton(onPressed: (){}, child: const Text('C')),
+                  FilledButton(onPressed: (){}, child: const Text('()')),
+                  FilledButton(onPressed: (){}, child: const Text('%')),
+                  FilledButton(onPressed: (){}, child: const Text('/'))
                 ],
               )
+              
             ],
           ),
         ),
