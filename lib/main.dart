@@ -1,3 +1,4 @@
+import 'package:calculadora_attemp_2/config/theme/app_thema.dart';
 import 'package:calculadora_attemp_2/views/principal.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,10 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-  return const MaterialApp(
+  return MaterialApp(
     title: 'Calculadora de aprendizaje',
-    home: Principal()
+    home: const Principal(),
+    theme: AppTheme().theme(),
   );
 }
 
