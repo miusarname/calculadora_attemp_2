@@ -1,9 +1,10 @@
-import 'package:calculadora_attemp_2/main.dart';
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
 
 class Principal extends StatefulWidget {
-  const Principal({super.key});
+  final VoidCallback increaseColor; // Agregamos el parámetro al constructor
+
+  const Principal({Key? key, required this.increaseColor}) : super(key: key);
 
   @override
   State<Principal> createState() => _PrincipalState();
@@ -11,8 +12,7 @@ class Principal extends StatefulWidget {
 
 class _PrincipalState extends State<Principal> {
   String toOper = '0';
-  int themeValue = 0;
-
+  double fontSizes = 95;
 
   @override
   Widget build(BuildContext context) {
@@ -20,24 +20,25 @@ class _PrincipalState extends State<Principal> {
       appBar: AppBar(
         title: const Text('Calculadora'),
         actions: [
-          IconButton(onPressed: () {
-            themeValue = themeValue + 1;
-            setState(() {
-              
-            });
-          }, icon: const Icon(Icons.color_lens))
+          IconButton(
+             onPressed: widget.increaseColor,
+            icon: const Icon(Icons.color_lens),
+          ),
         ],
       ),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            Container(
+              height: 150,
+              child: Text(
               toOper,
-              style: const TextStyle(fontSize: 95, fontWeight: FontWeight.w100),
+              style: TextStyle(fontSize: fontSizes, fontWeight: FontWeight.w100),
+            ),
             ),
             const SizedBox(
-              height: 20, // Reduced height to provide some spacing
+              height: 250, // Reduced height to provide some spacing
             ),
             // Calculator buttons
             Expanded(
@@ -50,8 +51,10 @@ class _PrincipalState extends State<Principal> {
                         child: FilledButton(
                           onPressed: () {
                             if (toOper == '0' || toOper == '0.0') {
+                              fontSizes = 95;
                               toOper = "0";
                             } else {
+                              fontSizes = 95;
                               toOper = "0";
                             }
                             setState(() {});
@@ -300,6 +303,11 @@ class _PrincipalState extends State<Principal> {
                         child: FilledButton(
                           onPressed: () {
                             if (toOper != "0") {
+                              if ( toOper.length >= 7 ) {
+                                fontSizes -= 10;
+                                setState(() {
+                                });
+                              }
                               toOper += ".";
                             }
                             setState(() {});
@@ -355,3 +363,4 @@ class FilledButton extends StatelessWidget {
     );
   }
 }
+
