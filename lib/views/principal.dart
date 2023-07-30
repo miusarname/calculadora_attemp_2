@@ -21,7 +21,7 @@ class _PrincipalState extends State<Principal> {
         title: const Text('Calculadora'),
         actions: [
           IconButton(
-             onPressed: widget.increaseColor,
+            onPressed: widget.increaseColor,
             icon: const Icon(Icons.color_lens),
           ),
         ],
@@ -30,12 +30,13 @@ class _PrincipalState extends State<Principal> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               height: 150,
               child: Text(
-              toOper,
-              style: TextStyle(fontSize: fontSizes, fontWeight: FontWeight.w100),
-            ),
+                toOper,
+                style:
+                    TextStyle(fontSize: fontSizes, fontWeight: FontWeight.w100),
+              ),
             ),
             const SizedBox(
               height: 250, // Reduced height to provide some spacing
@@ -76,6 +77,10 @@ class _PrincipalState extends State<Principal> {
                           onPressed: () {
                             if (toOper == '0' || toOper == '0.0') {
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "%";
                             }
                             setState(() {});
@@ -88,6 +93,10 @@ class _PrincipalState extends State<Principal> {
                           onPressed: () {
                             if (toOper == '0' || toOper == '0.0') {
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "/";
                             }
                             setState(() {});
@@ -106,6 +115,10 @@ class _PrincipalState extends State<Principal> {
                             if (toOper == '0' || toOper == '0.0') {
                               toOper = "7";
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "7";
                             }
                             setState(() {});
@@ -120,6 +133,10 @@ class _PrincipalState extends State<Principal> {
                             if (toOper == '0' || toOper == '0.0') {
                               toOper = "8";
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "8";
                             }
                             setState(() {});
@@ -133,6 +150,10 @@ class _PrincipalState extends State<Principal> {
                             if (toOper == '0' || toOper == '0.0') {
                               toOper = "9";
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "9";
                             }
                             setState(() {});
@@ -145,6 +166,10 @@ class _PrincipalState extends State<Principal> {
                           onPressed: () {
                             if (toOper == '0' || toOper == '0.0') {
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "*";
                             }
                             setState(() {});
@@ -164,6 +189,10 @@ class _PrincipalState extends State<Principal> {
                             if (toOper == '0' || toOper == '0.0') {
                               toOper = "4";
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "4";
                             }
                             setState(() {});
@@ -178,6 +207,10 @@ class _PrincipalState extends State<Principal> {
                             if (toOper == '0' || toOper == '0.0') {
                               toOper = "5";
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "5";
                             }
 
@@ -192,6 +225,10 @@ class _PrincipalState extends State<Principal> {
                             if (toOper == '0' || toOper == '0.0') {
                               toOper = "6";
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "6";
                             }
                             setState(() {});
@@ -204,6 +241,10 @@ class _PrincipalState extends State<Principal> {
                           onPressed: () {
                             if (toOper == '0' || toOper == '0.0') {
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "-";
                             }
                             setState(() {});
@@ -223,6 +264,10 @@ class _PrincipalState extends State<Principal> {
                             if (toOper == '0' || toOper == '0.0') {
                               toOper = "1";
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "1";
                             }
                             setState(() {});
@@ -237,6 +282,10 @@ class _PrincipalState extends State<Principal> {
                             if (toOper == '0' || toOper == '0.0') {
                               toOper = "2";
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "2";
                             }
                             setState(() {});
@@ -250,6 +299,10 @@ class _PrincipalState extends State<Principal> {
                             if (toOper == '0' || toOper == '0.0') {
                               toOper = "3";
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "3";
                             }
                             setState(() {});
@@ -262,6 +315,10 @@ class _PrincipalState extends State<Principal> {
                           onPressed: () {
                             if (toOper == '0' || toOper == '0.0') {
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "+";
                             }
                             setState(() {});
@@ -279,6 +336,10 @@ class _PrincipalState extends State<Principal> {
                           onPressed: () {
                             if (toOper == '0' || toOper == '0.0') {
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += "-";
                             }
                             setState(() {});
@@ -292,6 +353,10 @@ class _PrincipalState extends State<Principal> {
                           onPressed: () {
                             if (toOper == '0' || toOper == '0.0') {
                             } else {
+                              if (toOper.length >= 7) {
+                                fontSizes -= 10;
+                                setState(() {});
+                              }
                               toOper += '0';
                             }
                             setState(() {});
@@ -303,10 +368,9 @@ class _PrincipalState extends State<Principal> {
                         child: FilledButton(
                           onPressed: () {
                             if (toOper != "0") {
-                              if ( toOper.length >= 7 ) {
+                              if (toOper.length >= 7) {
                                 fontSizes -= 10;
-                                setState(() {
-                                });
+                                setState(() {});
                               }
                               toOper += ".";
                             }
@@ -363,4 +427,3 @@ class FilledButton extends StatelessWidget {
     );
   }
 }
-
