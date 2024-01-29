@@ -37,6 +37,7 @@ samples, guidance on mobile development, and a full API reference.
 ![Captura de pantalla 2](/screenshots/screenshot2.png)
 *Descripción de la captura de pantalla 2.*
 
+
 ### Cómo usar la calculadora
 
 1. Descarga e instala la aplicación en tu dispositivo Android o iOS.
